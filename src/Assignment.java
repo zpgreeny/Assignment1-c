@@ -7,6 +7,9 @@ public class Assignment {
 
     public static void main(String args[]) {
 
+        int overall;
+
+
         Scanner keyboard = new Scanner(System.in);
 
         System.out.print("Please enter a grade: ");
@@ -26,6 +29,8 @@ public class Assignment {
 
         System.out.print("Please enter a grade: ");
         int grade6 = keyboard.nextInt();
+
+        overall  = (grade + grade2 + grade3 + grade4 + grade5 + grade6) / 6;
 
 
         if (grade > 100 || grade < 0) {
@@ -76,12 +81,17 @@ public class Assignment {
             System.out.printf("grade: %s %n",
                     grades3(grade6));
 
+
+
         }
 
 
         System.out.printf("Your average grade is: %d %% %n"
                 , average(grade, grade2, grade3, grade4, grade5, grade6));
 
+
+        System.out.printf("your %s %n",
+                averagegrade(overall));
 
 
 
@@ -273,9 +283,42 @@ public class Assignment {
         return null;
     }
 
+    public static String averagegrade(int overall) {
+
+        if (overall > 90 && overall< 100) {
+            return "Final Grade: " + overall + "%" + " is equal to a A+";
+        }
+        if (overall > 80 && overall < 91) {
+            return "Final Grade: " + overall + "%" + " is equal to a A";
+        }
+        if (overall > 75 && overall < 81) {
+            return "Final Grade: " + overall + "%" + " is equal to a B+";
+        }
+        if (overall > 65 && overall < 76) {
+            return "Final Grade: " + overall + "%" + " is equal to a B";
+        }
+        if (overall > 60 && overall < 66) {
+            return "Final Grade: " + overall + "%" + " is equal to a C+";
+        }
+        if (overall > 55 && overall < 61) {
+            return "Final Grade: " + overall + "%" + " is equal to a C";
+        }
+        if (overall > 50 && overall < 56) {
+            return "Final Grade: " + overall + "%" + " is equal to a D";
+        }
+        if (overall > 0 && overall < 51) {
+            return "Final Grade: " + overall + "%" + " is equal to a E";
+        }
+
+        return null;
+    }
+
 
 
         public static int average(int grade, int grade2, int grade3, int grade4, int grade5, int grade6) {
             return ((grade + grade2 + grade3 + grade4 + grade5 + grade6) / 6);
+
+
         }
+
 }
