@@ -1,67 +1,97 @@
+//Zachary Patrick Green
+//Jaret Wright
+//Assignment 1
+/*
+START
+overall = average grade, assigned to a letter grade
+prints: enter a grade
+input each grade
+if the grade is not valid it will return with error/null
+grades get stored in method that places with average
+grades also get assigned a letter grade
+program prints the grades, also with their letter grade
+program prints average grade
+program prints average grade with letter grade
+*/
+
 import java.util.Scanner;
 
 public class Assignment {
 
 
 
-
+//main method
     public static void main(String args[]) {
 
+        //adding a new integer "overall"
         int overall;
 
-
+        //implementing a new scanner, which allows the program to read keyboard input.
         Scanner keyboard = new Scanner(System.in);
 
+        //asking the user to input a grade
+        //creating where input will be stored as well as using our scanner implementation
         System.out.print("Please enter a grade: ");
         int grade = keyboard.nextInt();
 
+        //asking the user to input a grade
+        //creating where input will be stored as well as using our scanner implementation
         System.out.print("Please enter a grade: ");
         int grade2 = keyboard.nextInt();
 
+        //asking the user to input a grade
+        //creating where input will be stored as well as using our scanner implementation
         System.out.print("Please enter a grade: ");
         int grade3 = keyboard.nextInt();
 
+        //asking the user to input a grade
+        //creating where input will be stored as well as using our scanner implementation
         System.out.print("Please enter a grade: ");
         int grade4 = keyboard.nextInt();
 
+        //asking the user to input a grade
+        //creating where input will be stored as well as using our scanner implementation
         System.out.print("Please enter a grade: ");
         int grade5 = keyboard.nextInt();
 
+        //asking the user to input a grade
+        //creating where input will be stored as well as using our scanner implementation
         System.out.print("Please enter a grade: ");
         int grade6 = keyboard.nextInt();
 
+        //setting the int "overall" to be equal to the equation of the sum of all the grades divided by 6
         overall  = (grade + grade2 + grade3 + grade4 + grade5 + grade6) / 6;
 
-
+        //if statement/statements that give an error message if the grade isn't within the bounds of 0-100
         if (grade > 100 || grade < 0) {
             System.out.println("ERROR 404, Please enter a grade between 0% and 100%, Try Again");
-            die();
+
         }
         if (grade2 > 100 || grade2 < 0) {
             System.out.println("ERROR 404, Please enter a grade between 0% and 100%, Try Again");
-            die();
+
         }
         if (grade3 > 100 || grade3 < 0) {
             System.out.println("ERROR 404, Please enter a grade between 0% and 100%, Try Again");
-            die();
+
         }
         if (grade4 > 100 || grade4 < 0) {
             System.out.println("ERROR 404, Please enter a grade between 0% and 100%, Try Again");
-            die();
+
         }
         if (grade5 > 100 || grade5 < 0) {
             System.out.println("ERROR 404, Please enter a grade between 0% and 100%, Try Again");
-            die();
+
         }
         if (grade6 > 100 || grade6 < 0) {
             System.out.println("ERROR 404, Please enter a grade between 0% and 100%, Try Again");
-            die();
+
         }
 
 
 
+        //an if statement/statements that output the returned grade percentages and their grade values
 
-        if (grade < 100 && grade> 0){
 
             System.out.printf("grade: %s %n",
                     grades(grade));
@@ -73,23 +103,23 @@ public class Assignment {
                     grades3(grade3));
 
             System.out.printf("grade: %s %n",
-                    grades(grade4));
+                    grades4(grade4));
 
             System.out.printf("grade: %s %n",
-                    grades2(grade5));
+                    grades5(grade5));
 
             System.out.printf("grade: %s %n",
-                    grades3(grade6));
+                    grades6(grade6));
 
 
 
-        }
 
 
+        //prints the average grade(every grade divided by 6) as a percentage
         System.out.printf("Your average grade is: %d %% %n"
                 , average(grade, grade2, grade3, grade4, grade5, grade6));
 
-
+        //prints the average grade as a letter grade
         System.out.printf("your %s %n",
                 averagegrade(overall));
 
@@ -99,8 +129,7 @@ public class Assignment {
 
     }
 
-    private static void die() {
-    }
+
 
 
     public static String grades(int grade) {
@@ -169,55 +198,58 @@ public class Assignment {
             return "3rd: " + grade3 + "%" + " = A+";
         }
         if (grade3 > 80 && grade3 < 91) {
-            return "1nd: " + grade3 + "%" + " = A";
+            return "3rd: " + grade3 + "%" + " = A";
         }
         if (grade3 > 75 && grade3 < 81) {
-            return "1st: " + grade3 + "%" + " = B+";
+            return "3rd: " + grade3 + "%" + " = B+";
         }
         if (grade3 > 65 && grade3 < 76) {
-            return "1st: " + grade3 + "%" + " = B";
+            return "3rd: " + grade3 + "%" + " = B";
         }
         if (grade3 > 60 && grade3 < 66) {
-            return "1st: " + grade3 + "%" + " = C+";
+            return "3rd: " + grade3 + "%" + " = C+";
         }
         if (grade3 > 55 && grade3 < 61) {
-            return "1st: " + grade3 + "%" + " = C";
+            return "3rd: " + grade3 + "%" + " = C";
         }
         if (grade3 > 50 && grade3 < 56) {
-            return "1st: " + grade3 + "%" + " = D";
+            return "3rd: " + grade3 + "%" + " = D";
         }
         if (grade3 > 0 && grade3 < 51) {
-            return "1st: " + grade3 + "%" + " = E";
+            return "3rd: " + grade3 + "%" + " = E";
         }
 
         return null;
     }
 
+
+
+
     public static String grades4(int grade4) {
 
         if (grade4 > 90 && grade4 < 100) {
-            return "2st: " + grade4 + "%" + " = A+";
+            return "4th: " + grade4 + "%" + " = A+";
         }
         if (grade4 > 80 && grade4 < 91) {
-            return "2st: " + grade4 + "%" + " = A";
+            return "4th: " + grade4 + "%" + " = A";
         }
         if (grade4 > 75 && grade4 < 81) {
-            return "2st: " + grade4 + "%" + " = B+";
+            return "4th: " + grade4 + "%" + " = B+";
         }
         if (grade4 > 65 && grade4 < 76) {
-            return "2st: " + grade4 + "%" + " = B";
+            return "4th: " + grade4 + "%" + " = B";
         }
         if (grade4 > 60 && grade4 < 66) {
-            return "2st: " + grade4 + "%" + " = C+";
+            return "4th: " + grade4 + "%" + " = C+";
         }
         if (grade4 > 55 && grade4 < 61) {
-            return "2st: " + grade4 + "%" + " = C";
+            return "4th: " + grade4 + "%" + " = C";
         }
         if (grade4 > 50 && grade4 < 56) {
-            return "2st: " + grade4 + "%" + " = D";
+            return "4th: " + grade4 + "%" + " = D";
         }
         if (grade4 > 0 && grade4 < 51) {
-            return "2st: " + grade4 + "%" + " = E";
+            return "4th: " + grade4 + "%" + " = E";
         }
 
         return null;
@@ -226,28 +258,28 @@ public class Assignment {
     public static String grades5(int grade5) {
 
         if (grade5 > 90 && grade5 < 100) {
-            return "2st: " + grade5 + "%" + " = A+";
+            return "5th: " + grade5 + "%" + " = A+";
         }
         if (grade5 > 80 && grade5 < 91) {
-            return "2st: " + grade5 + "%" + " = A";
+            return "5th: " + grade5 + "%" + " = A";
         }
         if (grade5 > 75 && grade5 < 81) {
-            return "2st: " + grade5 + "%" + " = B+";
+            return "5th: " + grade5 + "%" + " = B+";
         }
         if (grade5 > 65 && grade5 < 76) {
-            return "2st: " + grade5 + "%" + " = B";
+            return "5th: " + grade5 + "%" + " = B";
         }
         if (grade5 > 60 && grade5 < 66) {
-            return "2st: " + grade5 + "%" + " = C+";
+            return "5th: " + grade5 + "%" + " = C+";
         }
         if (grade5 > 55 && grade5 < 61) {
-            return "2st: " + grade5 + "%" + " = C";
+            return "5th: " + grade5 + "%" + " = C";
         }
         if (grade5 > 50 && grade5 < 56) {
-            return "2st: " + grade5 + "%" + " = D";
+            return "5th: " + grade5 + "%" + " = D";
         }
         if (grade5 > 0 && grade5 < 51) {
-            return "2st: " + grade5 + "%" + " = E";
+            return "5th: " + grade5 + "%" + " = E";
         }
 
         return null;
@@ -256,28 +288,28 @@ public class Assignment {
     public static String grades6(int grade6) {
 
         if (grade6 > 90 && grade6< 100) {
-            return "2st: " + grade6 + "%" + " = A+";
+            return "6th: " + grade6 + "%" + " = A+";
         }
         if (grade6 > 80 && grade6 < 91) {
-            return "2st: " + grade6 + "%" + " = A";
+            return "6th: " + grade6 + "%" + " = A";
         }
         if (grade6 > 75 && grade6 < 81) {
-            return "2st: " + grade6 + "%" + " = B+";
+            return "6th: " + grade6 + "%" + " = B+";
         }
         if (grade6 > 65 && grade6 < 76) {
-            return "2st: " + grade6 + "%" + " = B";
+            return "6th: " + grade6 + "%" + " = B";
         }
         if (grade6 > 60 && grade6 < 66) {
-            return "2st: " + grade6 + "%" + " = C+";
+            return "6th: " + grade6 + "%" + " = C+";
         }
         if (grade6 > 55 && grade6 < 61) {
-            return "2st: " + grade6 + "%" + " = C";
+            return "6th: " + grade6 + "%" + " = C";
         }
         if (grade6 > 50 && grade6 < 56) {
-            return "2st: " + grade6 + "%" + " = D";
+            return "6th: " + grade6 + "%" + " = D";
         }
         if (grade6 > 0 && grade6 < 51) {
-            return "2st: " + grade6 + "%" + " = E";
+            return "6th: " + grade6 + "%" + " = E";
         }
 
         return null;
