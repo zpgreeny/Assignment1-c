@@ -130,8 +130,10 @@ public class Assignment {
     }
 
 
-
-
+    /**
+     *these methods take each inputted number grade and calculates its letter grade then assigns it to an int
+     **/
+//method that calculates the letter grade for the assigned grade
     public static String grades(int grade) {
 
         if (grade > 90 && grade < 100) {
@@ -161,7 +163,7 @@ public class Assignment {
 
         return null;
     }
-
+    //method that calculates the letter grade for the assigned grade
     public static String grades2(int grade2) {
 
         if (grade2 > 90 && grade2 < 100) {
@@ -191,7 +193,7 @@ public class Assignment {
 
         return null;
     }
-
+    //method that calculates the letter grade for the assigned grade
     public static String grades3(int grade3) {
 
         if (grade3 > 90 && grade3 < 100) {
@@ -221,10 +223,7 @@ public class Assignment {
 
         return null;
     }
-
-
-
-
+    //method that calculates the letter grade for the assigned grade
     public static String grades4(int grade4) {
 
         if (grade4 > 90 && grade4 < 100) {
@@ -254,7 +253,7 @@ public class Assignment {
 
         return null;
     }
-
+    //method that calculates the letter grade for the assigned grade
     public static String grades5(int grade5) {
 
         if (grade5 > 90 && grade5 < 100) {
@@ -284,7 +283,7 @@ public class Assignment {
 
         return null;
     }
-
+    //method that calculates the letter grade for the assigned grade
     public static String grades6(int grade6) {
 
         if (grade6 > 90 && grade6< 100) {
@@ -314,7 +313,7 @@ public class Assignment {
 
         return null;
     }
-
+    //method that calculates the letter grade for the assigned grade
     public static String averagegrade(int overall) {
 
         if (overall > 90 && overall< 100) {
@@ -345,8 +344,10 @@ public class Assignment {
         return null;
     }
 
-
-
+        /**
+         *this method (average) gets the average from all inputed number grades
+          **/
+        //method that calculates the average of all the grades and stores it into a int
         public static int average(int grade, int grade2, int grade3, int grade4, int grade5, int grade6) {
             return ((grade + grade2 + grade3 + grade4 + grade5 + grade6) / 6);
 
